@@ -1,0 +1,404 @@
+{
+    "id": "test",
+    "name": "Anamnesebogen",
+    "displayName": "Anamnesebogen",
+    "anamnesis": true,
+    "type": "anamnesis",
+    "file": "test.pdf",
+    "clientPages": [
+      {
+        "subheader": "Allgemeine Fragen",
+        "fields": [
+          {
+            "type": "text",
+            "key": "patient_occupation",
+            "label": "Ihr Beruf:",
+            "requires": {},
+            "validation": {
+              "required": false
+            }
+          },
+          {
+            "type": "text",
+            "key": "a_doctor_name",
+            "label": "Name Ihres Hausarzt:",
+            "requires": {},
+            "validation": {
+              "required": false
+            }
+          },
+          {
+            "type": "text",
+            "key": "a_doctor_address",
+            "label": "Adresse Ihres Hausarzt:",
+            "requires": {},
+            "validation": {
+              "required": false
+            }
+          },
+          {
+            "type": "text",
+            "key": "a_doctor_phone",
+            "label": "Telefonnummer Ihres Hausarzt:",
+            "requires": {},
+            "validation": {
+              "required": false
+            }
+          }
+        ]
+      },
+      {
+        "subheader": "Gesundheitliche Fragen",
+        "fields": [
+          {
+            "type": "checkbox",
+            "key": "a_disease",
+            "label": "Haben oder hatten Sie eine der folgenden Erkrankungen?",
+            "items": [
+              {
+                "label": "Asthma",
+                "value": "asthma"
+              },
+              {
+                "label": "Hypertonie (Bluthochdruck)",
+                "value": "high_blood_pressure"
+              },
+              {
+                "label": "HIV-Infektion",
+                "value": "hiv"
+              },
+              {
+                "label": "Diabetes mellitus (Zucker)",
+                "value": "diabetes"
+              },
+              {
+                "label": "Hypotonie (niedriger Blutdruck)",
+                "value": "low_blood_pressure"
+              },
+              {
+                "label": "Hepatitis A/B/C",
+                "value": "hepatitis"
+              },
+              {
+                "label": "Nierenfunktionsstörung",
+                "value": "kidney"
+              },
+              {
+                "label": "Herzinfarkt",
+                "value": "heart_attack"
+              },
+              {
+                "label": "Rheuma",
+                "value": "rheumatism"
+              },
+              {
+                "label": "Schilddrüsenerkrankung",
+                "value": "thyroid"
+              }
+            ],
+            "textBoxPlaceholder": "",
+            "allowTextBox": false,
+            "requires": {},
+            "validation": {
+              "required": false
+            },
+            "dopo_label": ""
+          }
+        ]
+      },
+      {
+        "subheader": "Gesundheitliche Fragen",
+        "fields": [
+          {
+            "type": "checkbox",
+            "key": "a_disease2",
+            "label": "Haben oder hatten Sie eine der folgenden Erkrankungen?",
+            "items": [
+              {
+                "label": "Schlaganfall",
+                "value": "stroke"
+              },
+              {
+                "label": "Osteoporose",
+                "value": "osteoporosis"
+              },
+              {
+                "label": "Epilepsie",
+                "value": "epilepsy"
+              },
+              {
+                "label": "Blutgerinnungsstörung",
+                "value": "blood"
+              },
+              {
+                "label": "Allergie",
+                "value": "allergy"
+              }
+            ],
+            "textBoxPlaceholder": "",
+            "allowTextBox": false,
+            "requires": {},
+            "validation": {
+              "required": false
+            },
+            "dopo_label": ""
+          },
+          {
+            "type": "text",
+            "key": "a_disease_other_text",
+            "label": "Liegen sonstige Krankheiten oder Leiden vor?",
+            "requires": {},
+            "validation": {
+              "required": false
+            }
+          },
+          {
+            "type": "checkbox",
+            "key": "a_disease2_osteoporosis",
+            "label": "Bezüglich Osteoporose:",
+            "items": [
+              {
+                "label": "Nehmen Sie in diesem Zusammenhang Biphosphonate?",
+                "value": "additional"
+              }
+            ],
+            "textBoxPlaceholder": "",
+            "allowTextBox": false,
+            "requires": {
+              "a_disease2": [
+                "osteoporosis"
+              ]
+            },
+            "validation": {
+              "required": false
+            },
+            "dopo_label": ""
+          },
+          {
+            "type": "text",
+            "key": "a_disease2_osteoporosis_additional_text",
+            "label": "Welche Biphosphonate?",
+            "requires": {
+              "a_disease2": [
+                "osteoporosis"
+              ],
+              "a_disease2_osteoporosis": [
+                "additional"
+              ]
+            },
+            "validation": {
+              "required": false
+            }
+          },
+          {
+            "type": "checkbox",
+            "key": "a_disease2_blood",
+            "label": "Bezüglich Blutgerinnungsstörung:",
+            "items": [
+              {
+                "label": "Nehmen Sie in diesem Zusammenhang blutverdünnende Medikamente?",
+                "value": "medication"
+              }
+            ],
+            "textBoxPlaceholder": "",
+            "allowTextBox": false,
+            "requires": {
+              "a_disease2": [
+                "blood"
+              ]
+            },
+            "validation": {
+              "required": false
+            },
+            "dopo_label": ""
+          },
+          {
+            "type": "text",
+            "key": "a_disease2_blood_medication_text",
+            "label": "Welche blutverdünnende Medikamente?",
+            "requires": {
+              "a_disease2": [
+                "blood"
+              ],
+              "a_disease2_blood": [
+                "medication"
+              ]
+            },
+            "validation": {
+              "required": false
+            }
+          },
+          {
+            "type": "text",
+            "key": "a_disease2_allergy_text",
+            "label": "Welche Allergien?",
+            "requires": {
+              "a_disease2": [
+                "allergy"
+              ]
+            },
+            "validation": {
+              "required": false
+            }
+          }
+        ]
+      },
+      {
+        "subheader": "Gesundheitliche Fragen",
+        "fields": [
+          {
+            "type": "checkbox",
+            "key": "a_question",
+            "label": "",
+            "items": [
+              {
+                "label": "Tragen Sie einen Herzschrittmacher?",
+                "value": "pacemaker"
+              },
+              {
+                "label": "Besteht zur Zeit eine Schwangerschaft?",
+                "value": "pregnant"
+              },
+              {
+                "label": "Rauchen Sie?",
+                "value": "smoking"
+              }
+            ],
+            "textBoxPlaceholder": "",
+            "allowTextBox": false,
+            "requires": {},
+            "validation": {
+              "required": false
+            },
+            "dopo_label": ""
+          },
+          {
+            "type": "text",
+            "key": "a_question_smoking_text",
+            "label": "Wie viel pro Tag?",
+            "requires": {
+              "a_question": [
+                "smoking"
+              ]
+            },
+            "validation": {
+              "required": false
+            }
+          },
+          {
+            "type": "text",
+            "key": "a_medication_text",
+            "label": "Welche Medikamente nehmen Sie regelmäßig ein?",
+            "requires": {},
+            "validation": {
+              "required": false
+            }
+          },
+          {
+            "type": "checkbox",
+            "key": "a_suffering",
+            "label": "Leiden Sie unter einen der folgenden Dinge?",
+            "items": [
+              {
+                "label": "Zahnfleischbluten",
+                "value": "gums"
+              },
+              {
+                "label": "Zahnknirschen",
+                "value": "gnashing"
+              },
+              {
+                "label": "Zahnarztangst",
+                "value": "fear"
+              },
+              {
+                "label": "Schnarchen",
+                "value": "snoring"
+              },
+              {
+                "label": "Meine Zahnstellung",
+                "value": "position"
+              }
+            ],
+            "textBoxPlaceholder": "",
+            "allowTextBox": false,
+            "requires": {},
+            "validation": {
+              "required": false
+            },
+            "dopo_label": ""
+          },
+          {
+            "type": "text",
+            "key": "a_last_xray",
+            "label": "Wann war die letzte Röntgenuntersuchung Ihrer Zähne und bei welchem Zahnarzt?",
+            "requires": {},
+            "validation": {
+              "required": false
+            }
+          }
+        ]
+      },
+      {
+        "subheader": "Dokumente hochladen",
+        "fields": [
+          {
+            "type": "file",
+            "key": "med_plan_doc",
+            "label": "",
+            "text": "Sie haben hier die Möglichkeit ein Bild / Dokument von Ihrem Medikationsplan / Allergiepass / Impfpass o.Ä. hochzuladen.",
+            "documentName": "Dokumente des Patienten",
+            "requires": {},
+            "validation": {
+              "required": false
+            }
+          }
+        ]
+      },
+      {
+        "subheader": "Kontroll- und Reinigungstermin (PZR)",
+        "fields": [
+          {
+            "type": "radio",
+            "key": "a_reminder",
+            "label": "Gerne erinnern wir Sie an Ihren nächsten Kontroll- und Reinigungstermin (PZR).",
+            "choices": [
+              {
+                "label": "Ja, bitte erinnern Sie mich.",
+                "value": "yes"
+              },
+              {
+                "label": "Nein, ich wünsche diesen Service nicht.",
+                "value": "no"
+              }
+            ],
+            "requires": {},
+            "validation": {
+              "required": false
+            },
+            "dopo_label": ""
+          },
+          {
+            "type": "checkbox",
+            "key": "cancellation_fee",
+            "label": "Bitte sagen Sie Ihren Termin mind. 24 Stunden vorher ab, wenn Sie verhindert sind, sodass wir kein Ausfallhonorar berechnen müssen.",
+            "items": [
+              {
+                "label": "Ich habe diese Information gelesen und verstanden.",
+                "value": "yes"
+              }
+            ],
+            "textBoxPlaceholder": "",
+            "allowTextBox": false,
+            "requires": {},
+            "validation": {
+              "required": true
+            },
+            "dopo_label": ""
+          }
+        ]
+      }
+    ],
+    "portalQuestions": []
+  }
+  
