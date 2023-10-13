@@ -1,6 +1,6 @@
 import React from "react";
 import { PDFDownloadLink, PDFViewer } from "@react-pdf/renderer";
-import PDFFile from "./PDFFile";
+import PDFFile from "./PdfFile";
 
 export default function MyApp() {
   return (
@@ -12,10 +12,8 @@ export default function MyApp() {
   );
 }
 
-{
-  /* <PDFDownloadLink document={<PDFFile />} fileName="Test">
-{({ loading }) =>
-  loading ? <div>Loading Document...</div> : <button>Download</button>
-}
-</PDFDownloadLink> */
-}
+//  <PDFDownloadLink document={<PDFFile />} fileName="Test">
+// {({ loading }) =>
+//   loading ? <div>Loading Document...</div> : <button>Download</button>
+// }
+// </PDFDownloadLink>
